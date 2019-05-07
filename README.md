@@ -44,6 +44,17 @@ Attribute Information:
 3. Evaluated the test data on various performance metrics like accuracy also plotted Confusion matrix 
 using seaborne
 
+**K-nn with BOW,TF-IDF,AVG-W2v,TF-IDF W2V text classifications and Optimal-k ,Brute Force algorithms:**
+
+|          |sample size|Optimal_K|Brute Force   |              |              |            |                            
+|----------|-----------|---------|--------------|--------------|--------------|------------| 
+|          |           |         |Accuracy      |Precision     |Recall        |F1-score    |
+|BOW       |  60k      |   15    |   81.40%     |    0.815     |    0.994     |  0.896     |
+|TF-IDF    |  60k      |   10    |   81.72%     |    0.823     |    0.985     |  0.897     |
+|Avg-W2V   |  60k      |   45    |   80.23%     |    0.805     |    0.996     |  0.890     |
+|TF-IDF W2V|  60k      |   40    |   80.45%     |    0.805     |    0.999     |  0.892     |
+    
+
 ###### Conclusions:
 1.  KNN is a very slow Algorithm takes very long time to train.
 2.  Best Accuracy  is achieved by Avg Word2Vec Featurization which is of 89.38%.
