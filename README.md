@@ -199,18 +199,6 @@ using seaborne
 |TF-IDF W2V|  100k     |3                |25       |79.19%  |    0.843     |    0.911     |  0.876     |60.47  |
 
 
-**Gradient Boosting Classifier:**    
-
-
-|          |sample size|no. of estimators|learning-rate|         |           |           |            |       |                            
-|----------|-----------|-----------------|-------------|---------|-----------|-----------|------------|       |
-|          |           |                 |             |Accuracy |Precision  |Recall     |F1-score    |AUC    |
-|BOW       |  100k     |100              |0.4          |86.08%   |    0.867  |    0.977  |  0.919     |67.85  |
-|TF-IDF    |  100k     |60               |0.3          |84.78%   |    0.850  |    0.984  |  0.912     |63.33  |
-|Avg-W2V   |  100k     |100              |0.4          |84.86%   |    0.870  |    0.955  |  0.910     |68.18  |
-|TF-IDF W2V|  100k     |80               |0.5          |84.86%   |    0.870  |    0.955  |  0.910     |68.18  |
-
-
 ###### Conclusions:
 1. TFIDF Featurization in Random Forest (BASE-LEARNERS=10) with random search gave the best results with F1-score of 0.857.
 2. TFIDF Featurization in GBDT (BASE-LEARNERS=275, DEPTH=10) gave the best results with F1-score of 0.8708.
