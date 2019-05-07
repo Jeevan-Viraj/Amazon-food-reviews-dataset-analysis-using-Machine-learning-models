@@ -198,6 +198,7 @@ using seaborne
 |Avg-W2V   |  100k     |3                |25       |80.01%  |    0.849     |    0.915     |  0.881     |61.48  |
 |TF-IDF W2V|  100k     |3                |25       |79.19%  |    0.843     |    0.911     |  0.876     |60.47  |
 
+
 **Gradient Boosting Classifier:**    
 
 
