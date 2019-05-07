@@ -72,7 +72,7 @@ using seaborne
 
 ###### Conclusions:
 1.  KNN is a very slow Algorithm takes very long time to train.
-2.  Best Accuracy  is achieved by Avg Word2Vec Featurization which is of 89.38%.
+2.  Best Accuracy  is achieved by Avg Word2Vec Featurization which is of 80.23%.
 3.  Both kd-tree and brute algorithms of KNN gives comparatively similar results.
 4.  Overall KNN was not that good for this dataset.
 <hr>
@@ -98,7 +98,7 @@ using seaborne
 ###### Conclusions:
 1. Naive Bayes is much faster algorithm than KNN
 2. The performance of bernoulli naive bayes is way much more better than multinomial naive bayes.
-3. Best F1 score is acheived by BOW featurization which is 0.9342
+3. Best F1 score is acheived by TFIDF featurization which is 0.906
 <hr>
 
 ### Logistic Regression
@@ -123,7 +123,7 @@ using seaborne
 
 ###### Conclusions:
 1. Sparsity increases as we decrease C (increase lambda) when we use L1 Regularizer for regularization.
-2. TF_IDF Featurization performs best with F1_score of 0.967 and Accuracy of 91.39.
+2. TF_IDF Featurization performs best with F1_score of 0.927 and Accuracy of 87.77%.
 3. Features are multi-collinear with different featurization.
 4. Logistic Regression is faster algorithm.
 <hr>
@@ -155,7 +155,7 @@ using seaborne
 |TF-IDF W2V|  100k     |1                  |1    |   80.56%     |    0.806     |    1.000     |  0.892     |50.01   |
 
 ###### Conclusions:
-1. BOW Featurization with linear kernel with grid search gave the best results with F1-score of 0.9201.
+1. BOW Featurization with linear kernel with grid search gave the best results with F1-score of 0.929.
 2. Using SGDClasiifier takes very less time to train.
 <hr>
 
@@ -178,7 +178,7 @@ using seaborne
     
 
 ###### Conclusions:
-1. BOW Featurization(max_depth=8) gave the best results with accuracy of 85.8% and F1-score of 0.858.
+1. BOW Featurization(max_depth=8) gave the best results with accuracy of 81.50% and F1-score of 0.896.
 2. Decision Trees on BOW and tfidf would have taken forever if had taken all the dimensions as it had huge dimension and hence tried with max 8 as max_depth
 <hr>
 
@@ -200,7 +200,7 @@ using seaborne
 
 
 ###### Conclusions:
-1. TFIDF Featurization in Random Forest (BASE-LEARNERS=10) with random search gave the best results with F1-score of 0.857.
+1. BOW Featurization in Random Forest (BASE-LEARNERS=5) with random search gave the best results with F1-score of 0.99.
 2. TFIDF Featurization in GBDT (BASE-LEARNERS=275, DEPTH=10) gave the best results with F1-score of 0.8708.
 <hr>
 
