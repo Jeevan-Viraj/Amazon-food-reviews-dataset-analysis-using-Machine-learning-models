@@ -83,6 +83,18 @@ using seaborne
 2. Evaluated the test data on various performance metrics like accuracy, f1-score, precision, recall,etc. also plotted Confusion matrix using seaborne
 3. Printed Top 25 Important Features for both Negative and Positive Reviews
 
+
+**Naive-Bayes with different text classification:**
+
+|          |sample size|Optimal_alpha|Test accuracy |precision     |recall        |f1-score    |                         
+|----------|-----------|-------------|--------------|--------------|--------------|------------| 
+|          |           |             |              |              |              |            |
+|BOW       | 100k      |   0.01      |   82.90%     |    0.828     |    0.995     |  0.904     |
+|TF-IDF    | 100k      |   0.05      |   83.37%     |    0.834     |    0.992     |  0.906     |
+
+**Observation:**
+              By comparing above table, for our data TFIDF with Naive-bayes is working better.
+    
 ###### Conclusions:
 1. Naive Bayes is much faster algorithm than KNN
 2. The performance of bernoulli naive bayes is way much more better than multinomial naive bayes.
@@ -95,6 +107,18 @@ using seaborne
 3. Evaluated the test data on various performance metrics like accuracy, f1-score, precision, recall,etc. also plotted Confusion matrix using seaborne
 4. Showed How Sparsity increases as we increase lambda or decrease C when L1 Regularizer is used for each featurization<br>
 5. Did pertubation test to check whether the features are multi-collinear or not
+
+**Logistic regression with different text classifications:**
+**Below values are for test data**    
+
+|          |sample size|Optimal_lambda(1/C)|              |              |              |            |                            
+|----------|-----------|-------------------|--------------|--------------|--------------|------------| 
+|          |           |                   |Accuracy      |Precision     |Recall        |F1-score    |
+|BOW       |  100k     |1/5=0.2            |   88.24%     |    0.900     |    0.960     |  0.929     |
+|TF-IDF    |  100k     |1/1=1.0            |   87.77%     |    0.888     |    0.969     |  0.927     |
+|Avg-W2V   |  100k     |1/0.00005=20,000   |   82.88%     |    0.839     |    0.971     |  0.900     |
+|TF-IDF W2V|  100k     |1/0.1=10           |   83.33%     |    0.845     |    0.968     |  0.903     |
+    
 
 
 ###### Conclusions:
@@ -110,6 +134,25 @@ using seaborne
 3. Evaluated the test data on various performance metrics like accuracy, f1-score, precision, recall,etc. also plotted Confusion matrix using seaborne
 4. Evaluated SGDClassifier on the best resulting featurization
 
+**Linear Kernel:**    
+
+|          |sample size|Optimal_lambda(1/C)|              |              |              |            |       |                            
+|----------|-----------|-------------------|--------------|--------------|--------------|------------|-------| 
+|          |           |                   |Accuracy      |Precision     |Recall        |F1-score    |AUC    |
+|BOW       |  100k     |1/5=0.2            |   88.24%     |    0.900     |    0.960     |  0.929     |75.88  |
+|TF-IDF    |  100k     |1/1=1.0            |   87.77%     |    0.888     |    0.969     |  0.927     |75.98  |
+|Avg-W2V   |  100k     |1/0.00005=20,000   |   82.88%     |    0.839     |    0.971     |  0.900     |64.90  |
+|TF-IDF W2V|  100k     |1/0.1=10           |   83.33%     |    0.845     |    0.968     |  0.903     |60.98  |
+    
+ **RBF Kernel:**    
+
+|          |sample size|Optimal_lambda(1/C)|Gamma|              |              |              |            |        |                            
+|----------|-----------|-------------------|-----|--------------|--------------|--------------|------------|--------|
+|          |           |                   |     |Accuracy      |Precision     |Recall        |F1-score    |AUC     |
+|BOW       |  100k     |1                  |1    |   85.90%     |    0.867     |    0.975     |  0.918     |67.67   |
+|TF-IDF    |  100k     |1                  |1    |   86.08%     |    0.868     |    0.975     |  0.919     |68.11   |       
+|Avg-W2V   |  100k     |1                  |1    |   80.58%     |    0.806     |    1.000     |  0.892     |50.05   |
+|TF-IDF W2V|  100k     |1                  |1    |   80.56%     |    0.806     |    1.000     |  0.892     |50.01   |
 
 ###### Conclusions:
 1. BOW Featurization with linear kernel with grid search gave the best results with F1-score of 0.9201.
@@ -122,6 +165,18 @@ using seaborne
 3. Evaluated the test data on various performance metrics like accuracy, f1-score, precision, recall,etc. also plotted Confusion matrix using seaborne
 4. Plotted feature importance recieved from the decision tree classifier
 
+**Decision trees with different text classifications:**
+**Below values are for test data**    
+
+|          |sample size|Maximum depth      |              |              |              |            |                            
+|----------|-----------|-------------------|--------------|--------------|--------------|------------| 
+|          |           |                   |Accuracy      |Precision     |Recall        |F1-score    |
+|BOW       |  100k     |15                 |   81.50%     |    0.830     |    0.973     |  0.896     |
+|TF-IDF    |  100k     |10                 |   81.82%     |    0.827     |    0.978     |  0.896     |
+|Avg-W2V   |  100k     |5                  |   80.96%     |    0.817     |    0.983     |  0.892     |
+|TF-IDF W2V|  100k     |5                  |   80.63%     |    0.809     |    0.992     |  0.892     |
+    
+
 ###### Conclusions:
 1. BOW Featurization(max_depth=8) gave the best results with accuracy of 85.8% and F1-score of 0.858.
 2. Decision Trees on BOW and tfidf would have taken forever if had taken all the dimensions as it had huge dimension and hence tried with max 8 as max_depth
@@ -133,6 +188,25 @@ using seaborne
 3. Evaluated the test data on various performance metrics like accuracy, f1-score, precision, recall,etc. also plotted Confusion matrix using seaborne
 4. Plotted world cloud of feature importance recieved from the RF and GBDT classifier
 
+**Random Forest Classifier:**    
+
+|          |sample size|no. of estimators|max-depth|        |              |              |            |       |                            
+|----------|-----------|-----------------|---------|--------|--------------|--------------|------------|-------| 
+|          |           |                 |         |Accuracy|Precision     |Recall        |F1-score    |AUC    |
+|BOW       |  100k     |5                |25       |80.89%  |    0.809     |    0.998     |  0.994     |51.22  |
+|TF-IDF    |  100k     |3                |25       |80.90%  |    0.811     |    0.995     |  0.893     |51.73  |
+|Avg-W2V   |  100k     |3                |25       |80.01%  |    0.849     |    0.915     |  0.881     |61.48  |
+|TF-IDF W2V|  100k     |3                |25       |79.19%  |    0.843     |    0.911     |  0.876     |60.47  |
+
+**Gradient Boosting Classifier:**    
+
+|          |sample size|no. of estimators|learning-rate|              |              |              |            |       |                            
+|----------|-----------|-----------------|-------------|--------------|--------------|--------------|------------|       |
+|          |           |                 |             |Accuracy      |Precision     |Recall        |F1-score    |AUC    |
+|BOW       |  100k     |100              |0.4          |86.08%        |    0.867     |    0.977     |  0.919     |67.85  |
+|TF-IDF    |  100k     |60               |0.3          |84.78%        |    0.850     |    0.984     |  0.912     |63.33  |
+|Avg-W2V   |  100k     |100              |0.4          |84.86%        |    0.870     |    0.955     |  0.910     |68.18  |
+|TF-IDF W2V|  100k     |80               |0.5          |84.86%        |    0.870     |    0.955     |  0.910     |68.18  |
 
 ###### Conclusions:
 1. TFIDF Featurization in Random Forest (BASE-LEARNERS=10) with random search gave the best results with F1-score of 0.857.
