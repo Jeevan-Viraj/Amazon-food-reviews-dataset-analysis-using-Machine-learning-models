@@ -54,6 +54,21 @@ using seaborne
 |Avg-W2V   |  60k      |   45    |   80.23%     |    0.805     |    0.996     |  0.890     |
 |TF-IDF W2V|  60k      |   40    |   80.45%     |    0.805     |    0.999     |  0.892     |
     
+    
+**K-nn with BOW,TF-IDF,AVG-W2v,TF-IDF W2V text classifications and Optimal-k ,Brute Force algorithms:**
+
+|          |sample size|Optimal_K|kd-tree       |              |              |            |                            
+|----------|-----------|---------|--------------|--------------|--------------|------------| 
+|          |           |         |Accuracy      |Precision     |Recall        |F1-score    |
+|BOW       | 60k       |   45    |   79.59%     |  0.804       |  0.987       |0.866       |
+|TF-IDF    | 60k       |   45    |   80.42%     |  0.805       |  0.999       |0.892       |
+|Avg-W2V   | 60k       |   45    |   80.23%     |  0.805       |  0.996       |0.890       |
+|TF-IDF W2V| 60k       |   40    |   80.45%     |  0.805       |  0.999       |0.892       |
+
+
+**observation:**
+              By comparing above table, for our data Avg-w2v with knn is working better.
+    
 
 ###### Conclusions:
 1.  KNN is a very slow Algorithm takes very long time to train.
