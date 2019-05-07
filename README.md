@@ -32,7 +32,7 @@ Attribute Information:
 10. Text - text of the review
 <hr>
 
-### 1 Amazon Food Reviews EDA, NLP, Text Preprocessing and Visualization using TSNE
+### Amazon Food Reviews EDA, NLP, Text Preprocessing and Visualization using TSNE
 1. Defined Problem Statement  
 2. Performed Exploratory Data Analysis(EDA) on Amazon Fine Food Reviews Dataset plotted Word Clouds, Distplots, Histograms, etc.
 3. Performed Data Cleaning & Data Preprocessing by removing unneccesary and duplicates rows and for text reviews removed html tags, punctuations, Stopwords and Stemmed the words using Porter Stemmer 
@@ -40,7 +40,7 @@ Attribute Information:
 5. Plotted TSNE plots for Different Featurization of Data viz. BOW(uni-gram), tfidf, Avg-Word2Vec and tf-idf-Word2Vec
 <hr>
 
-### 2 KNN
+### KNN
 1. Applied K-Nearest Neighbour on Different Featurization of Data viz. BOW(uni-gram), tfidf, Avg-Word2Vec and tf-idf-Word2Vec 
 2. Used both brute & kd-tree implementation of KNN 
 3. Evaluated the test data on various performance metrics like accuracy also plotted Confusion matrix 
@@ -54,7 +54,7 @@ using seaborne
 <hr>
 
 
-### 3 Naive Bayes
+### Naive Bayes
 1. Applied Naive Bayes using Bernoulli NB and Multinomial NB on Different Featurization of Data viz. BOW(uni-gram), tfidf. 
 2. Evaluated the test data on various performance metrics like accuracy, f1-score, precision, recall,etc. also plotted Confusion matrix using seaborne
 3. Printed Top 25 Important Features for both Negative and Positive Reviews
@@ -65,7 +65,7 @@ using seaborne
 3. Best F1 score is acheived by BOW featurization which is 0.9342
 <hr>
 
-### 4 Logistic Regression
+### Logistic Regression
 1. Applied Logistic Regression on Different Featurization of Data viz. BOW(uni-gram), tfidf, Avg-Word2Vec and tf-idf-Word2Vec 
 2. Used both Grid Search & Randomized Search Cross Validation
 3. Evaluated the test data on various performance metrics like accuracy, f1-score, precision, recall,etc. also plotted Confusion matrix using seaborne
@@ -80,7 +80,7 @@ using seaborne
 4. Logistic Regression is faster algorithm.
 <hr>
 
-### 5 SVM
+###  SVM
 1. Applied SVM with rbf(radial basis function) kernel on Different Featurization of Data viz. BOW(uni-gram), tfidf, Avg-Word2Vec and tf-idf-Word2Vec 
 2. Used both Grid Search & Randomized Search Cross Validation 
 3. Evaluated the test data on various performance metrics like accuracy, f1-score, precision, recall,etc. also plotted Confusion matrix using seaborne
@@ -92,7 +92,7 @@ using seaborne
 2. Using SGDClasiifier takes very less time to train.
 <hr>
 
-### 6 Decision Trees
+###  Decision Trees
 1. Applied Decision Trees on Different Featurization of Data viz. BOW(uni-gram), tfidf, Avg-Word2Vec and tf-idf-Word2Vec 
 2. Used both Grid Search with random 30 points for getting the best max_depth 
 3. Evaluated the test data on various performance metrics like accuracy, f1-score, precision, recall,etc. also plotted Confusion matrix using seaborne
@@ -103,7 +103,7 @@ using seaborne
 2. Decision Trees on BOW and tfidf would have taken forever if had taken all the dimensions as it had huge dimension and hence tried with max 8 as max_depth
 <hr>
 
-### 6 Ensembles(RF&GBDT)
+### Ensembles(RF&GBDT)
 1. Applied Random Forest on Different Featurization of Data viz. BOW(uni-gram), tfidf, Avg-Word2Vec and tf-idf-Word2Vec 
 2. Used both Grid Search with random 30 points for getting the best max_depth, learning rate and n_estimators. 
 3. Evaluated the test data on various performance metrics like accuracy, f1-score, precision, recall,etc. also plotted Confusion matrix using seaborne
@@ -113,16 +113,5 @@ using seaborne
 ###### Conclusions:
 1. TFIDF Featurization in Random Forest (BASE-LEARNERS=10) with random search gave the best results with F1-score of 0.857.
 2. TFIDF Featurization in GBDT (BASE-LEARNERS=275, DEPTH=10) gave the best results with F1-score of 0.8708.
-<hr>
-
-### 7 LSTM(RNNs)
-1. Applied different architectures of LSTM on Amazon fine food reviews dataset
-2. Recurrent Neural Networks(RNN) with one LSTM layer.
-3. Recurrent Neural Networks(RNN) with two LSTM layer.
-
-
-###### Conclusions:
-1. After including more than one LSTM layers the test accuracy has increased.
-2. Both the models are overfit
 <hr>
 
